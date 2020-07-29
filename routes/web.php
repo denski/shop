@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,3 +26,5 @@ Route::get('/services', function () {
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
+
+Auth::routes();
