@@ -52,6 +52,10 @@
 
                     @auth
                     <li class="nav-item">
+                        <a class="nav-link" href="{{ route('categories.index') }}">Categories</a>
+                    </li>
+
+                    <li class="nav-item">
                         <a class="nav-link" href="#" onclick="document.getElementById('logout-form').submit()" >Logout</a>
                     </li>
                     <form action="{{ route('logout') }}" method="POST" id="logout-form">

@@ -27,4 +27,6 @@ Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
 
+Route::resource('categories', 'CategoryController')->middleware('auth');
+
 Auth::routes();
