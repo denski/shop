@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\Product;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -10,6 +11,7 @@ class HomeController extends Controller
     public function index()
     {
         $allCategories = Category::all();
-        return view('index', compact('allCategories'));
+        $allProducts = Product::with('category')->get();
+        return view('index', compact('allCategories', 'allProducts'));
     }
 }
